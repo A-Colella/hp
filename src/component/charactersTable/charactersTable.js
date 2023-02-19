@@ -18,11 +18,14 @@ function CharacterTableByHouse (props) {
             setCharacters(data[0])
             console.log(data[0])
             }
-        );
+        ); 
+       
         return () => {
             isMounted = false;
         }
 }); 
+
+
 
     // mapping dei dati =righe della tabella
     const tableContent = characters.map(
@@ -31,7 +34,6 @@ function CharacterTableByHouse (props) {
                 <td>{characters.image}</td>
                 <td>{characters.name}</td>
                 <td>{characters.house}</td>
-                <td>{characters.wand}</td>
                 <td>{characters.hogwartsStudent}</td>
             </tr>
         )
@@ -45,7 +47,6 @@ return (
                 <th></th>
                 <th>name</th>
                 <th>house</th>
-                <th>wand</th>
                 <th>hogwartsStudent</th>
             </tr>
         </thead>
