@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CharactersDataService, { fetchData, getCharacterByHouse } from "../../utility/utility";
+import style from "../charactersTable/charactersTable.module.css"
 
 function CharacterTableByHouse (props) {
     // house da props   
@@ -34,20 +35,20 @@ function CharacterTableByHouse (props) {
                 <td>{characters.image}</td>
                 <td>{characters.name}</td>
                 <td>{characters.house}</td>
-                <td>{characters.hogwartsStudent}</td>
+                <td>{characters.patronus}</td>
             </tr>
         )
     )
 //return di tutta la funzione 
 
 return (
-    <table>
+    <table className={`table table-striped table-dark ${style.table}`}>
         <thead>
             <tr>
                 <th></th>
-                <th>name</th>
-                <th>house</th>
-                <th>hogwartsStudent</th>
+                <th>Name</th>
+                <th>House</th>
+                <th>patronus</th>
             </tr>
         </thead>
         <tbody>
