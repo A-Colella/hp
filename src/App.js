@@ -1,5 +1,5 @@
 import './App.css';
-import CharacterTableByHouse from './component/Table/table';
+import CharacterTableByHouse from './component/charactersTable/charactersTable';
 
 function App() {
   return (
