@@ -49,7 +49,7 @@ return (
             <th></th>
             <th>Name</th>
             <th>House</th>
-            <th>patronus</th>
+            <th>Patronus</th>
         </tr>
     </thead>
     <tbody>
