@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import CharactersDataService, { fetchData, getCharacterByHouse } from "../../utility/utility";
 import style from "../charactersTable/charactersTable.module.css"
 
-function CharacterTableByHouse (props) {
+function CharacterTableByHouse () {
     // house da props   
-    const {house} = (props);
+    let {house} = useParams();
+    
+   
 
     //characters for hook
     const [characters, setCharacters] = useState([]); 
@@ -14,7 +17,7 @@ function CharacterTableByHouse (props) {
         let isMounted = true;
         const service = new CharactersDataService()
         service
-        .getCharacterByHouse()
+        .getCharacterByHouse({house})
         .then((data) => {
             setCharacters(data[0])
             console.log(data[0])
@@ -24,7 +27,7 @@ function CharacterTableByHouse (props) {
         return () => {
             isMounted = false;
         }
-}); 
+},[{house}]); 
 
 
 
@@ -32,7 +35,7 @@ function CharacterTableByHouse (props) {
     const tableContent = characters.map(
         (characters) => (
             <tr key={characters.id}>
-                <td>{characters.image}</td>
+                <td><img src={characters.image}/></td>
                 <td>{characters.name}</td>
                 <td>{characters.house}</td>
                 <td>{characters.patronus}</td>

@@ -6,6 +6,8 @@ import {BrowserRouter,Route, Routes} from 'react-router-dom';
 import Characters from './views/characters/characters';
 import CharacterDetail from './views/charactersDetail/charactersDetail';
 import Logo from '../src/assets/image/logo.png';
+import CharacterTableByHouse from './component/charactersTable/charactersTable';
+
 
 function App() {
   const nav = [
@@ -21,9 +23,9 @@ function App() {
    logo={Logo}
    >
     <Routes>
-      <Route exact path="/" element={Home} />
-      <Route exact path="/character/:house" element={Characters}/>
-      <Route exact path="/characterDetail" element={CharacterDetail}/>
+      <Route exact path="/" element={<Home/>} />
+      <Route exact path="/character/:house" element={<CharacterTableByHouse/>}/>
+      <Route exact path="/characterDetail" element={<CharacterDetail/>}/>
     </Routes>
 
    
