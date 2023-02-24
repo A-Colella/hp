@@ -1,9 +1,8 @@
-import { Children } from 'react';
+
 import './App.css';
-import CharacterTableByHouse from './component/charactersTable/charactersTable';
 import MainTemplate from './component/mainTemplate/mainTemplate';
 import Home from './views/home/home';
-import { BrowserRouter,Route, Routes, Swicth } from 'react-router-dom';
+import {BrowserRouter,Route, Routes} from 'react-router-dom';
 import Characters from './views/characters/characters';
 import CharacterDetail from './views/charactersDetail/charactersDetail';
 import Logo from '../src/assets/image/logo.png';
@@ -18,11 +17,13 @@ function App() {
    <MainTemplate
    footerCourseName="Applicazioni Web: Progettazione e Sviluppo"
    footerCourseLink="https://elearning.unimib.it/course/info.php?id=44672"
+   navItem={nav}
+   logo={Logo}
    >
     <Routes>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/character/:house" component={Characters}/>
-      <Route exact path="/characterDetail" component={CharacterDetail}/>
+      <Route exact path="/" element={Home} />
+      <Route exact path="/character/:house" element={Characters}/>
+      <Route exact path="/characterDetail" element={CharacterDetail}/>
     </Routes>
 
    

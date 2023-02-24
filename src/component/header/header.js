@@ -4,33 +4,30 @@ import {
     Nav,
     Navbar,
     NavbarToggler,
+    NavItem
 } from 'reactstrap';
+import{NavLink as RouterLink} from "react-router-dom";
+import style from "../header/header.module.css";
 
-import { NavLink as RouterLink } from "react-router-dom";
-import style from "../header/header.module.css"
 
-const Header = (props) => {
-    const {logo, NavItem} = props;
-    
-    const [isOpen, setIsOpen] = useState (false);
+    const Header = (props) => {
+        const {logo, navItem} =props;
+        const [isOpen, setIsOpen] = useState (false);
+        const toggle = () => setIsOpen (!isOpen);
+        const itemList = navItem.map((item) => {
+            return (
+                <NavItem key={item.url} className={style.navItem}>
+                    <RouterLink exact={item.exact}
+                                activeClassName={style.active}
+                                to={item.url}
+                                className="nav-link">
+                        {item.text}
+                                
+                    </RouterLink>
+                </NavItem>
+            )
+        });
 
-    const toggle = () => setIsOpen(!isOpen);
-
-    const itemList = NavItem.map ((item) => {
-        return (
-           <NavItem key={item.url} className={style.navItem}>
-                <RouterLink exact={item.exact}
-                            activeClassName={style.active}
-                            to={item.url}
-                            className="nav-link">
-                    {item.text}
-
-                </RouterLink>
-
-           </NavItem>
-        )
-    });
-    
     return (
         <div className={style.Navbar}>
             <Navbar expand="md" light>
