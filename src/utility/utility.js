@@ -1,6 +1,6 @@
 export default class CharactersDataService {
-    async getCharacterByHouse() {
-        const url = "https://hp-api.onrender.com/api/characters/house/gryffindor";
+    async getCharacterByHouse(house) {
+        const url = "https://hp-api.onrender.com/api/characters/house/"+house.house;
         try {
             const promise = await fetch(url, {method: "GET"});
             const response = await promise.json ();

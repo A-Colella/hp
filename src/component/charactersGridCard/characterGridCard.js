@@ -7,8 +7,6 @@ function CharacterTableByHouse () {
     // house da props   
     let {house} = useParams();
     
-   
-
     //characters for hook
     const [characters, setCharacters] = useState([]); 
 
@@ -32,34 +30,23 @@ function CharacterTableByHouse () {
 
 
     // mapping dei dati =righe della tabella
-    const tableContent = characters.map(
+    const gridContent = characters.map(
         (characters) => (
-            <tr key={characters.id}>
-                <td><img src={characters.image}/></td>
-                <td>{characters.name}</td>
-                <td>{characters.house}</td>
-                <td>{characters.patronus}</td>
-            </tr>
+           
         )
     )
 //return di tutta la funzione 
 
 return (
-    <table className={`table table-striped table-dark ${style.table}`}>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Name</th>
-                <th>House</th>
-                <th>patronus</th>
-            </tr>
-        </thead>
-        <tbody>
-           {tableContent}
-        </tbody>
-    </table>
-
-
+    <div className={`row
+            row-cols-${col.xs}
+            row-cols-sm-${col.sm}
+            row-cols-md-${col.md}
+            row-cols-lg-${col.lg}
+            row-cols-xl-${col.xl}
+    `}>
+        {}
+    </div>
 )
 }
 
