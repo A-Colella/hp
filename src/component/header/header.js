@@ -9,8 +9,7 @@ import {
 import{NavLink as RouterLink} from "react-router-dom";
 import style from "../header/header.module.css";
 
-
-    const Header = (props) => {
+     const Header = (props) => {
         const {logo, navItem} =props;
         const [isOpen, setIsOpen] = useState (false);
         const toggle = () => setIsOpen (!isOpen);
