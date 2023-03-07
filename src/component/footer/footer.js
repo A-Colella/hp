@@ -12,7 +12,7 @@ function footer(props){
             <div className="container-fluid">
                 <div className="row">
                     <div className="col">
-                        <div className="cpiright">
+                        <div className={style.cpiright}>
                             <h4>This project was created by Anna Colella</h4>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
-.navBar {
-    background: white;
-    border-bottom: 2px solid #dd092f;
+.Navbar {
+    background-color: #242424;
+    border-bottom: 2px solid #242424;
     position: sticky;
     width: 100%;
     top: 0;
@@ -9,25 +9,24 @@
 
 .logo {
     max-width: 50px;
-    transition: all .2s;
-    margin-right: 20px;
-}
-
-.logo:hover {
-    transform: rotate(360deg);
-    filter: invert(14%) sepia(67%) saturate(7456%) hue-rotate(345deg) brightness(97%) contrast(100%);
+    margin-left: 5%;
+    margin-right: 10px;
+    float: left;
 }
 
 .navItem a {
     font-weight: bold;
     text-transform: uppercase;
     padding: 5px 20px;
-    color: #242424 !important;
+    color: white !important;
 }
 
 .navItem a.active {
-    color: #f90931 !important;
+    text-decoration: underline;
+    text-decoration-color: #504A8D;
 }
 .navItem a:hover {
-    color: #ff4c60;
+    text-decoration: underline;
+    text-decoration-color: #504A8D;
+
 }

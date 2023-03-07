@@ -12,7 +12,7 @@ import CharacterTableByHouse from './component/charactersTable/charactersTable';
 function App() {
   const nav = [
     {url:"/", text: "Home", exact: true},
-    {url:"/character", text: "Characters", exact: false},
+    
   ]
   return (
 <BrowserRouter>
