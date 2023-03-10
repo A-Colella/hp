@@ -21,15 +21,16 @@ Le directory principali sono:
 
 L’API utilizzata è  <a href="https://hp-api.onrender.com/"  >
 HP-API</a>, da questo servizio è possibile recuperare diverse informazioni relative ai vari personaggi. 
-Per accedere ai dati è stata definita una classe in utility chiamata CharactersDataService all’interno della classe è stato definito un metodo asincrono chiamato getCharacterByHouse che accetta come parametro una casa in modo da fare la chiamata all’URL corretto. 
+Per accedere ai dati è stata definita una classe in utility chiamata CharactersDataService all’interno della quale è stato definito un metodo get asincrono chiamato getCharacterByHouse che accetta come parametro una casa questo per permettere la costruzione e la chiamare l’URL corretto. 
 La chiamata è gestita con un try/catch. Nel caso in cui la chiamata andasse a buon fine viene restituito un array con la risposta e lo status della risposta. 
-Nel caso si errore viene restituita la dicitura di errore. L’errore non è gestito in altre parti del codice. 
+Nel caso si errore viene restituita la dicitura di errore, che non viene gestino in altre parti del codice. 
  <img width="857" alt="Screenshot 2023-03-10 at 19 30 11" src="https://user-images.githubusercontent.com/98492097/224397073-7aa990d9-6f56-4a9c-82f0-f9d66ebb1e3c.png">
 
-La classe viene implementata in charactersTable in una variabile chiamata service da cui si accede al metodo getCharacterByHouse a cui viene passato la house come parametro direttamente come prop del componente CharacterTableByHouse. 
+La classe creata nelle utility viene implementata in charactersTable in una variabile chiamata service da cui si accede al metodo getCharacterByHouse a cui viene passato la house come parametro direttamente come prop del componente CharacterTableByHouse. 
 Non è stato implementato il controllo sullo status della risposta, viene salvata la response nello state del componente. 
 <img width="607" alt="Screenshot 2023-03-10 at 19 30 26" src="https://user-images.githubusercontent.com/98492097/224397153-921901af-8212-4e96-9a29-90cc328a5d0a.png">
 
+Questa tipologia di implementazione funziona correttamente nella visualizzazione in tabella, ma non in griglia. 
 
 ## Visualizzazione
 All'utente si presenta la home come la scelta di una delle 4 case di Hogwarts 
