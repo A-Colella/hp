@@ -55,5 +55,5 @@ Da verificare al termine dello sviluppo:
 - Progettazione di immagine neutra quando non rimandata dal servizio
 - Compatibilità in tutti i dispositivi di visualizzazione 
 - Progettazione dello stato di errore e/o della pagine 404
-
+- Implementare il passaggio al personaggio successivo nella pagina dettagli
 
