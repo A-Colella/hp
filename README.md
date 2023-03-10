@@ -25,8 +25,7 @@ L’API utilizzata è HP-API (inserire link), da questo servizio è possibile re
 È stata definita una classe in utility chiamata CharactersDataService all’interno della classe è stato definito un medito asincrono chiamato getCharacterByHouse che accetta come parametro una casa in modo da fare la chiamata all’URL corretto. 
 La chiamata è gestita con un try/catch. Nel caso in cui la chiamata andasse a buon fine viene restituito un array con la risposta e lo status dell risposta. 
 Nel caso si errore viene restituita la dicitura di errore.  L’errore non è gestito in altre parti del codice. 
-
-
+ 
 La classe viene implementata in charactersTable in una variabile chiamata service da cui si accede al metodo getCharacterByHouse
 A cui viene passato la house come parametro direttamente come prop del componente CharacterTableByHouse. 
 Non è stato implementato il controllo sullo status della risposta, viene salvata la response nello state del componente. 
